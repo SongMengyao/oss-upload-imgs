@@ -88,6 +88,8 @@ export default {
           providerName: 'privateOSS',
           scope: 2
         }
+
+        // getOssParam 是后台提供的接口，用来获取 oss签名 host等参数
         return this.$store.dispatch('getOssParam', params).then(res => {
           if (res) {
             this.tokenData = res
